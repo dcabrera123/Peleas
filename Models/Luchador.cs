@@ -7,13 +7,10 @@ namespace Peleas.Models
     public class Luchador
     {
         public int ID { get; set; }
-        [Required(ErrorMessage = "Faltan Nombres")]
-		
+        [Required(ErrorMessage = "Falta Nombre")]		
         public string Nombre { get; set; }
         [Required(ErrorMessage = "Faltan Apellidos")]
         public string Apellidos { get; set; }
-        [Required(ErrorMessage = "Falta Apodo")]
-        public string Apodo { get; set; }
         [Required(ErrorMessage = "Falta Categoria")]          
         public string Categoria { get; set; }
         [Required(ErrorMessage = "Falta Diciplina")]   

@@ -1,2 +1,75 @@
+@model Peleas.Models.Lucha
 
 <link rel="stylesheet" href="~/css/estilo.css" />
+
+
+
+@{
+    ViewData["Title"] = "";
+}
+
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <form asp-action="RegistrarLucha">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Codigo" class="control-label">CÓDIGO : </label>
+                <input asp-for="Codigo" class="form-control" />
+                <span asp-validation-for="Codigo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lugar" class="control-label">lUGAR :</label>
+                <input asp-for="Lugar" class="form-control" />
+                <span asp-validation-for="Lugar"Lugar"Apellidos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fecha" class="control-label">FECHA: </label>
+                <input asp-for="Fecha" type="date" class="form-control" />
+                <span asp-validation-for="Fecha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Categoria" class="control-label">CATEGORIA: </label>
+                <input asp-for="Categoria" class="form-control"/>
+                <span asp-validation-for="Categoria" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Diciplina" class="control-label">DICIPLINA :</label>
+                <input asp-for="Diciplina" class="form-control" />
+                <span asp-validation-for="Diciplina" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descripcion1" class="control-label">DESCRIPCION 1: </label>
+                <input asp-for="Descripcion1" class="form-control" />
+                <span asp-validation-for="Descripcion1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descripcion2" class="control-label">DESCRIPCION 2: </label>
+                <input asp-for="Descripcion2" class="form-control" />
+                <span asp-validation-for="Descripcion2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descripcion3" class="control-label">DESCRIPCION 3: </label>
+                <input asp-for="Descripcion3" class="form-control" />
+                <span asp-validation-for="Descripcion3" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="REGISTRAR LUCHA" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

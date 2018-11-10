@@ -20,24 +20,43 @@ namespace Peleas.Controllers
             _context = context;
         }
 
-          // GET: Usuarios/Create
+          
         public IActionResult RegistrarLuchador()
         {
             return View();
         }
 
-        // POST: Usuarios/Create
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> RegistrarLuchador([Bind("Nombre","Apellidos","Apodo","Categoria","Diciplina","Descripcion1","Descripcion2","Descripcion3")] Luchador luchador)
+        public async Task<IActionResult> RegistrarLuchador([Bind("Nombre","Apellidos","Categoria","Diciplina","Descripcion1","Descripcion2","Descripcion3")] Luchador luchador)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(luchador);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Control");
+                return RedirectToAction("VerLuchadores");
             }
             return View(luchador);
+        }
+
+        public IActionResult RegistrarLucha()
+        {
+            return View();
+        }
+
+       
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> RegistrarLucha([Bind("Codigo","Lugar","Fecha","Categoria","Diciplina","Descripcion1","Descripcion2","Descripcion3")] Lucha lucha)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(lucha);
+                await _context.SaveChangesAsync();
+                return RedirectToAction("VerLuchas");
+            }
+            return View(lucha);
         }
 
         public async Task<IActionResult> Inicio(string contraseña)
@@ -65,12 +84,7 @@ namespace Peleas.Controllers
             return View(await controles.ToListAsync());
         }
 
-        public IActionResult RegistrarLucha()
-        {
-            return View();
-        }
-
-        
+       
 
         public IActionResult VerLuchadores()
         {

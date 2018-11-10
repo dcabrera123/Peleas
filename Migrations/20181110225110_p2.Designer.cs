@@ -10,9 +10,10 @@ using System;
 namespace Peleas.Migrations
 {
     [DbContext(typeof(MvcContext))]
-    partial class MvcContextModelSnapshot : ModelSnapshot
+    [Migration("20181110225110_p2")]
+    partial class p2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -72,6 +73,9 @@ namespace Peleas.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Apellidos")
+                        .IsRequired();
+
+                    b.Property<string>("Apodo")
                         .IsRequired();
 
                     b.Property<string>("Categoria")

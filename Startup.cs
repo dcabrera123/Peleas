@@ -28,7 +28,7 @@ namespace Peleas
             services.AddMvc();
             services.AddDbContext<MvcContext>(options =>
                   //options.UseSqlite("Data Source=MvcMovie.db")
-                  options.UseMySQL("server=localhost;database=p1;user=root;password=MySQL;port=3306")
+                  options.UseMySQL("server=localhost;database=p2;user=root;password=MySQL;port=3306")
 
                   );            
         }

@@ -10,9 +10,10 @@ using System;
 namespace Peleas.Migrations
 {
     [DbContext(typeof(MvcContext))]
-    partial class MvcContextModelSnapshot : ModelSnapshot
+    [Migration("20181110232445_p8")]
+    partial class p8
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
