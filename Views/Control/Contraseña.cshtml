@@ -1,0 +1,29 @@
+@model IEnumerable<Peleas.Models.Control>
+
+<link rel="stylesheet" href="~/css/estilo.css" />
+
+<div class="login-wrap">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab"></label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"></label>
+		<div class="login-form">
+			<div class="sign-in-htm">
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+                <form asp-controller="Control" asp-action="Inicio">
+				<div class="group">
+					<label for="pass" class="label">Contraseña</label>
+					<input id="pass" name="contraseña" type="password" class="input" data-type="password">
+					<br><br>
+					<input type="submit" class="button" value="INGRESAR">
+				</div>
+                </form>
+			</div>
+	
+			</div>
+		</div>
+	</div>
+</div>

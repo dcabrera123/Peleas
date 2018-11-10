@@ -4,16 +4,16 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Peleas.Models
 {
-    public class Luchador
+    public class Lucha
     {
         public int ID { get; set; }
-        [Required(ErrorMessage = "Faltan Nombres")]
-		
-        public string Nombre { get; set; }
-        [Required(ErrorMessage = "Faltan Apellidos")]
-        public string Apellidos { get; set; }
-        [Required(ErrorMessage = "Falta Apodo")]
-        public string Apodo { get; set; }
+        [Required(ErrorMessage = "Falta Codigo")]
+		[StringLength(40)]
+        public string Codigo { get; set; }
+        [Required(ErrorMessage = "Falta Lugar")]
+        public string Lugar { get; set; }
+        [Required(ErrorMessage = "Falta Fecha")]
+        public string Fecha { get; set; }
         [Required(ErrorMessage = "Falta Categoria")]          
         public string Categoria { get; set; }
         [Required(ErrorMessage = "Falta Diciplina")]   

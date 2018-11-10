@@ -10,5 +10,7 @@ namespace Peleas.Models
         }
 
         public DbSet<Peleas.Models.Luchador> Luchador { get; set; }
+        public DbSet<Peleas.Models.Lucha> Lucha { get; set; }
+        public DbSet<Peleas.Models.Control> Control { get; set; }
     }
 }
