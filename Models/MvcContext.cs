@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Peleas.Models;
+
 namespace Peleas.Models
 {
     public class MvcContext : DbContext
