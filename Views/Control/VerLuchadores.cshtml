@@ -11,15 +11,15 @@
 <form asp-controller="Control" asp-action="VerLuchadores">
     <p>
         Nombre: <input type="text" name="nombre">
-        <input type="submit"  class="w3-button w3-light-green" value="Buscar" />
+        <input type="submit"   value="Buscar" />
     </p>
     <p>
         Categoria: <input type="text" name="categoria">
-        <input type="submit"  class="w3-button w3-light-green" value="Buscar" />
+        <input type="submit"   value="Buscar" />
     </p>
     <p>
         Diciplina: <input type="text" name="diciplina">
-        <input type="submit"  class="w3-button w3-light-green" value="Buscar" />
+        <input type="submit"   value="Buscar" />
     </p>     
 </form>
 <br>
@@ -31,8 +31,8 @@
             <th> @Html.DisplayNameFor(model => model.ID)</th>
             <th> @Html.DisplayNameFor(model => model.Nombre)</th>
             <th> @Html.DisplayNameFor(model => model.Apellidos)</th>
-            <th> @Html.DisplayNameFor(model => model.Categorias)</th>
-            <th> @Html.DisplayNameFor(model => model.Diciplinas)</th>
+            <th> @Html.DisplayNameFor(model => model.Categoria)</th>
+            <th> @Html.DisplayNameFor(model => model.Diciplina)</th>
         </tr>
     </thead>
     <tbody>
@@ -41,8 +41,8 @@
             <td>@Html.DisplayFor(modelItem => item.ID)</td>
             <td>@Html.DisplayFor(modelItem => item.Nombre)</td>
             <td>@Html.DisplayFor(modelItem => item.Apellidos)</td>
-            <td>@Html.DisplayFor(modelItem => item.Categorias)</td>
-            <td>@Html.DisplayFor(modelItem => item.Diciplinas)</td>
+            <td>@Html.DisplayFor(modelItem => item.Categoria)</td>
+            <td>@Html.DisplayFor(modelItem => item.Diciplina)</td>
 
         </tr>
 }
