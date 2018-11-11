@@ -9,3 +9,14 @@ C:\Users\Clase\Desktop\Peleas\bin\Debug\netcoreapp2.0\Peleas.dll
 C:\Users\Clase\Desktop\Peleas\bin\Debug\netcoreapp2.0\Peleas.pdb
 C:\Users\Clase\Desktop\Peleas\obj\Debug\netcoreapp2.0\Peleas.dll
 C:\Users\Clase\Desktop\Peleas\obj\Debug\netcoreapp2.0\Peleas.pdb
+C:\Users\Clase\Peleas\bin\Debug\netcoreapp2.0\Peleas.deps.json
+C:\Users\Clase\Peleas\bin\Debug\netcoreapp2.0\Peleas.runtimeconfig.json
+C:\Users\Clase\Peleas\bin\Debug\netcoreapp2.0\Peleas.runtimeconfig.dev.json
+C:\Users\Clase\Peleas\bin\Debug\netcoreapp2.0\Peleas.dll
+C:\Users\Clase\Peleas\bin\Debug\netcoreapp2.0\Peleas.pdb
+C:\Users\Clase\Peleas\obj\Debug\netcoreapp2.0\Peleas.csprojAssemblyReference.cache
+C:\Users\Clase\Peleas\obj\Debug\netcoreapp2.0\Peleas.csproj.CoreCompileInputs.cache
+C:\Users\Clase\Peleas\obj\Debug\netcoreapp2.0\Peleas.AssemblyInfoInputs.cache
+C:\Users\Clase\Peleas\obj\Debug\netcoreapp2.0\Peleas.AssemblyInfo.cs
+C:\Users\Clase\Peleas\obj\Debug\netcoreapp2.0\Peleas.dll
+C:\Users\Clase\Peleas\obj\Debug\netcoreapp2.0\Peleas.pdb

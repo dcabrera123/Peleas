@@ -19,7 +19,25 @@ namespace Peleas.Controllers
         {
             _context = context;
         }
+        public async Task<IActionResult> VerLuchadores(string nombre, string categoria, string diciplina)
+        {
+             var luchadores = from m in _context.Luchador
+                 select m;
 
+            if (!String.IsNullOrEmpty(nombre))
+            {
+                luchadores = luchadores.Where(l => l.Nombre.Contains(nombre));
+            }
+            if (!String.IsNullOrEmpty(categoria))
+            {
+                luchadores = luchadores.Where(l => l.Categoria.Contains(categoria));
+            }
+            if (!String.IsNullOrEmpty(diciplina))
+            {
+                luchadores = luchadores.Where(l => l.Diciplina.Contains(diciplina));
+            }
+            return View(await luchadores.ToListAsync());
+        }
           
         public IActionResult RegistrarLuchador()
         {
@@ -86,10 +104,7 @@ namespace Peleas.Controllers
 
        
 
-        public IActionResult VerLuchadores()
-        {
-            return View();
-        }
+        
 
         public IActionResult VerLuchas()
         {

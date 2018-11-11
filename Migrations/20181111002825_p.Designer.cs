@@ -10,8 +10,8 @@ using System;
 namespace Peleas.Migrations
 {
     [DbContext(typeof(MvcContext))]
-    [Migration("20181110232754_p100")]
-    partial class p100
+    [Migration("20181111002825_p")]
+    partial class p
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Peleas.Migrations
 {
-    public partial class m1 : Migration
+    public partial class p : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -29,15 +29,14 @@ namespace Peleas.Migrations
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("MySQL:AutoIncrement", true),
-                    Apellidos = table.Column<string>(nullable: false),
-                    Celular = table.Column<int>(nullable: false),
-                    ConfirmarContraseña = table.Column<string>(nullable: true),
-                    ConfirmarCorreo = table.Column<string>(nullable: true),
-                    Contraseña = table.Column<string>(nullable: false),
-                    Correo = table.Column<string>(nullable: false),
-                    Nacimiento = table.Column<string>(nullable: true),
-                    Nombre = table.Column<string>(maxLength: 40, nullable: false),
-                    Usu = table.Column<string>(nullable: false)
+                    Categoria = table.Column<string>(nullable: false),
+                    Codigo = table.Column<string>(maxLength: 40, nullable: false),
+                    Descripcion1 = table.Column<string>(nullable: true),
+                    Descripcion2 = table.Column<string>(nullable: true),
+                    Descripcion3 = table.Column<string>(nullable: true),
+                    Diciplina = table.Column<string>(nullable: false),
+                    Fecha = table.Column<string>(nullable: false),
+                    Lugar = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -51,14 +50,12 @@ namespace Peleas.Migrations
                     ID = table.Column<int>(nullable: false)
                         .Annotation("MySQL:AutoIncrement", true),
                     Apellidos = table.Column<string>(nullable: false),
-                    Celular = table.Column<int>(nullable: false),
-                    ConfirmarContraseña = table.Column<string>(nullable: true),
-                    ConfirmarCorreo = table.Column<string>(nullable: true),
-                    Contraseña = table.Column<string>(nullable: false),
-                    Correo = table.Column<string>(nullable: false),
-                    Nacimiento = table.Column<string>(nullable: true),
-                    Nombre = table.Column<string>(maxLength: 40, nullable: false),
-                    Usu = table.Column<string>(nullable: false)
+                    Categoria = table.Column<string>(nullable: false),
+                    Descripcion1 = table.Column<string>(nullable: true),
+                    Descripcion2 = table.Column<string>(nullable: true),
+                    Descripcion3 = table.Column<string>(nullable: true),
+                    Diciplina = table.Column<string>(nullable: false),
+                    Nombre = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
