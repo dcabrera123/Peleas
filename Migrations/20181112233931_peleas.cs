@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Peleas.Migrations
 {
-    public partial class p : Migration
+    public partial class peleas : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

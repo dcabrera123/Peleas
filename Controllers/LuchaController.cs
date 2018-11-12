@@ -1,26 +1,37 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Peleas.Models;
 
 namespace Peleas.Controllers
 {
     public class LuchaController : Controller
     {
-        public IActionResult Luchas()
-        {
-            return View();
-        }
+        private readonly MvcContext _context;
 
-       
-        
-        public IActionResult Error()
+        public LuchaController(MvcContext context)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            _context = context;
         }
+        public async Task<IActionResult> Luchas()
+        {
+             var luchas = from m in _context.Lucha
+                 select m;
+            return View(await luchas.ToListAsync());
+        }
+       
+        public async Task<IActionResult> Lucha(string codigo)
+        {
+            var luchas = from m in _context.Lucha
+                 select m;
+            luchas = luchas.Where(c => c.Codigo.Equals(codigo));
+            return View(await luchas.ToListAsync());
+        }
+        
         
     }
 }

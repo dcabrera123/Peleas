@@ -1,0 +1,46 @@
+@model IEnumerable<Peleas.Models.Lucha>
+    
+<link rel="stylesheet" href="~/css/estilo.css" />
+
+
+
+
+
+<h2>Luchas</h2>
+
+<form asp-controller="Lucha" asp-action="Lucha">
+    <p>
+        Ingrese Código de Lucha: <input type="text" name="codigo">
+        <input type="submit"   value="Ver Detalles" />
+    </p>    
+</form>
+<br>
+
+<br>
+
+
+<table class="table" >
+    <thead>
+        <tr>
+            <th> @Html.DisplayNameFor(model => model.ID)</th>
+            <th> @Html.DisplayNameFor(model => model.Codigo)</th>
+            <th> @Html.DisplayNameFor(model => model.Lugar)</th>
+            <th> @Html.DisplayNameFor(model => model.Fecha)</th>
+            <th> @Html.DisplayNameFor(model => model.Categoria)</th>
+            <th> @Html.DisplayNameFor(model => model.Diciplina)</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.ID)</td>
+            <td>@Html.DisplayFor(modelItem => item.Codigo)</td>
+            <td>@Html.DisplayFor(modelItem => item.Lugar)</td>
+            <td>@Html.DisplayFor(modelItem => item.Fecha)</td>
+            <td>@Html.DisplayFor(modelItem => item.Categoria)</td>
+            <td>@Html.DisplayFor(modelItem => item.Diciplina)</td>
+
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,42 @@
+@model IEnumerable<Peleas.Models.Luchador>
+    
+<link rel="stylesheet" href="~/css/estilo.css" />
+
+
+
+
+
+<center><h1>Luchador</h1></center>
+<hr>
+<h2>Datos:</h2>
+<br>
+@foreach (var item in Model) {
+    <h4>Nombre: @Html.DisplayFor(modelItem => item.Nombre)</h4>
+    <h4>Apellidos: @Html.DisplayFor(modelItem => item.Apellidos)</h4>
+    <h4>CATEGORIA: @Html.DisplayFor(modelItem => item.Categoria)</h4>
+    <h4>DICIPLINA: @Html.DisplayFor(modelItem => item.Diciplina)</h4>
+}
+<br><br>
+<hr>
+
+<h2>Descripcion 1:</h2>
+<br>
+@foreach (var item in Model) {
+    <h4>@Html.DisplayFor(modelItem => item.Descripcion1)</h4>   
+}
+<br><br>
+<hr>
+
+<h2>Descripcion2 :</h2>
+<br>
+@foreach (var item in Model) {
+    <h4>@Html.DisplayFor(modelItem => item.Descripcion2)</h4>   
+}
+<br><br>
+<hr>
+
+<h2>Descripcion 3:</h2>
+<br>
+@foreach (var item in Model) {
+    <h4>@Html.DisplayFor(modelItem => item.Descripcion3)</h4>   
+}

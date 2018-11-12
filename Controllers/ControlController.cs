@@ -84,6 +84,20 @@ namespace Peleas.Controllers
             controles = controles.Where(c => c.Contraseña.Equals(contraseña));
             return View(await controles.ToListAsync());
         }
+        public IActionResult Control(string contraseña)
+        {
+            if(contraseña.Equals("fred")){
+               return View();
+            }else if(contraseña.Equals("deivy")){
+               return RedirectToAction("Deivy");
+            } {
+                return RedirectToAction("Contraseña");
+            }   
+        }
+        public IActionResult Deivy()
+        {
+             return View();
+        }
 
         
 
@@ -106,9 +120,24 @@ namespace Peleas.Controllers
 
         
 
-        public IActionResult VerLuchas()
+       public async Task<IActionResult> VerLuchas(string lugar, string categoria, string diciplina)
         {
-            return View();
+             var luchas = from m in _context.Lucha
+                 select m;
+
+            if (!String.IsNullOrEmpty(lugar))
+            {
+                luchas = luchas.Where(l => l.Lugar.Contains(lugar));
+            }
+            if (!String.IsNullOrEmpty(categoria))
+            {
+                luchas = luchas.Where(l => l.Categoria.Contains(categoria));
+            }
+            if (!String.IsNullOrEmpty(diciplina))
+            {
+                luchas = luchas.Where(l => l.Diciplina.Contains(diciplina));
+            }
+            return View(await luchas.ToListAsync());
         }
 
        
